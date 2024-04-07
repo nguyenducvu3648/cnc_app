@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:untitled5/all_machine.dart';
-import 'package:untitled5/table_calendar.dart';
-// import 'package:intl/date_symbol_data_local.dart';
 void main() {
-  runApp(MaterialApp(
-    home: MyApp(),
-  ));
+  runApp(MaterialApp(home: MyApp(),));
 }
 
 class MyApp extends StatefulWidget {
@@ -17,7 +13,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp(debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: SafeArea(
           child: Container(

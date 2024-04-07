@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:untitled5/machine_infor.dart';
-import 'package:untitled5/main.dart';
+import 'package:untitled5/table_calendar.dart';
 
 class all_machine extends StatefulWidget {
 
@@ -111,10 +110,10 @@ class _all_machineState  extends State<all_machine> {
         physics: AlwaysScrollableScrollPhysics(), // Sử dụng physics này để đảm bảo cuộn được
         children: [
           _buildMachine(context, 'Machine1', Color(0xFFC5E5A5)),
-          _buildMachine(context, 'Machine2', Color(0xFFFBE39D)),
-          _buildMachine(context, 'Machine3', Color(0xFFFBE39D)),
-          _buildMachine(context, 'Machine4', Color(0xFFFBE39D)),
-          _buildMachine(context, 'Machine5', Color(0xFFFBE39D)),
+          _buildMachine(context, 'Machine2', Color(0xFF9DFBD1)),
+          _buildMachine(context, 'Machine3', Color(0xFFB1FB9D)),
+          _buildMachine(context, 'Machine4', Color(0xFFEA9DFB)),
+          _buildMachine(context, 'Machine5', Color(0xFF9DB8FB)),
 
 
           // Thêm các máy mới vào đây
@@ -133,7 +132,7 @@ class _all_machineState  extends State<all_machine> {
         // Thực hiện hành động khi nhấn vào máy ở đây, ví dụ chuyển sang một trang khác
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => machine_infor()),
+          MaterialPageRoute(builder: (context) => TableCalendar()),
         );
       },
       child: Container(
