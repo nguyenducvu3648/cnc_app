@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:untitled5/table_calendar.dart';
+import 'package:untitled5/barChart.dart';
 
 class all_machine extends StatefulWidget {
 
@@ -132,7 +132,7 @@ class _all_machineState  extends State<all_machine> {
         // Thực hiện hành động khi nhấn vào máy ở đây, ví dụ chuyển sang một trang khác
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => TableCalendar()),
+          MaterialPageRoute(builder: (context) => barChart()),
         );
       },
       child: Container(

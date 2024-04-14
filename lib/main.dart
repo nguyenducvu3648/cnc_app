@@ -122,11 +122,11 @@ class _MyAppState extends State<MyApp> {
               child: Container(
                 decoration: BoxDecoration(
                   border: Border.all(
-                    color: Color(0xFF53B175),
+                    color: Color(0xFF99EEC0),
                     width: 2,
                   ),
                   borderRadius: BorderRadius.circular(16),
-                  color: Color(0xFF53B175),
+                  color: Color(0xFF99EEC0),
                 ),
                 margin: EdgeInsets.only(right: 8),
                 width: double.infinity,
@@ -161,11 +161,11 @@ class _MyAppState extends State<MyApp> {
                 child: Container(
                   decoration: BoxDecoration(
                     border: Border.all(
-                      color: Color(0xFFF8A44C),
+                      color: Color(0xFF99EEC0),
                       width: 2,
                     ),
                     borderRadius: BorderRadius.circular(16),
-                    color: Color(0xFFF8A44C),
+                    color: Color(0xFF99EEC0),
                   ),
                   margin: EdgeInsets.only(left: 8),
                   width: double.infinity,
@@ -217,11 +217,11 @@ class _MyAppState extends State<MyApp> {
               child: Container(
                 decoration: BoxDecoration(
                   border: Border.all(
-                    color: Color(0xFFF7A593),
+                    color: Color(0xFF99EEC0),
                     width: 2,
                   ),
                   borderRadius: BorderRadius.circular(16),
-                  color: Color(0xFFF7A593),
+                  color: Color(0xFF99EEC0),
                 ),
                 margin: EdgeInsets.only(right: 8),
                 width: double.infinity,
@@ -259,11 +259,11 @@ class _MyAppState extends State<MyApp> {
               child: Container(
                 decoration: BoxDecoration(
                   border: Border.all(
-                    color: Color(0xFFD3B0E0),
+                    color: Color(0xFF99EEC0),
                     width: 2,
                   ),
                   borderRadius: BorderRadius.circular(16),
-                  color: Color(0xFFD3B0E0),
+                  color: Color(0xFF99EEC0),
                 ),
                 margin: EdgeInsets.only(left: 8),
                 width: double.infinity,
@@ -314,11 +314,11 @@ class _MyAppState extends State<MyApp> {
               child: Container(
                 decoration: BoxDecoration(
                   border: Border.all(
-                    color: Color(0xFFFDE598),
+                    color: Color(0xFF99EEC0),
                     width: 2,
                   ),
                   borderRadius: BorderRadius.circular(16),
-                  color: Color(0xFFFDE598),
+                  color: Color(0xFF99EEC0),
                 ),
                 margin: EdgeInsets.only(right: 8),
                 width: double.infinity,
@@ -356,11 +356,11 @@ class _MyAppState extends State<MyApp> {
               child: Container(
                 decoration: BoxDecoration(
                   border: Border.all(
-                    color: Color(0xFFB7DFF5),
+                    color: Color(0xFF99EEC0),
                     width: 2,
                   ),
                   borderRadius: BorderRadius.circular(16),
-                  color: Color(0xFFB7DFF5),
+                  color: Color(0xFF99EEC0),
                 ),
                 margin: EdgeInsets.only(left: 8),
                 width: double.infinity,
