@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:untitled5/barChart.dart';
+import 'package:untitled5/BarChart.dart';
 
 class all_machine extends StatefulWidget {
 

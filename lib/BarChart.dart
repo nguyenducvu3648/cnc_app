@@ -51,22 +51,14 @@ class BarChartWithSecondaryAxis extends StatelessWidget {
       animate: animate,
       barGroupingType: charts.BarGroupingType.grouped,
       primaryMeasureAxis: charts.NumericAxisSpec(
-        tickProviderSpec: charts.BasicNumericTickProviderSpec(desiredTickCount: 3),
-        viewport: charts.NumericExtents(0, 1000000),
+        tickProviderSpec: charts.BasicNumericTickProviderSpec(desiredTickCount: 4),
+        viewport: charts.NumericExtents(0, 1200),
       ),
       secondaryMeasureAxis: charts.NumericAxisSpec(
-        tickProviderSpec: charts.BasicNumericTickProviderSpec(desiredTickCount: 3),
+        tickProviderSpec: charts.BasicNumericTickProviderSpec(desiredTickCount: 4),
+        viewport: charts.NumericExtents(0, 24),
       ),
       defaultInteractions: false,
-      // Thêm renderer để thiết lập màu sắc cho từng cột
-      customSeriesRenderers: [
-        charts.BarTargetLineRendererConfig<String>(
-          // ID của cột phụ
-          customRendererId: secondaryMeasureAxisId,
-          groupingType: charts.BarGroupingType.grouped,
-        ),
-      ],
-      // Thêm legend để hiển thị chú thích
       behaviors: [
         charts.SeriesLegend(
           position: charts.BehaviorPosition.bottom,
@@ -77,26 +69,25 @@ class BarChartWithSecondaryAxis extends StatelessWidget {
       ],
     );
   }
-
   static List<charts.Series<OrdinalSales, String>> _createSampleData() {
     final globalSalesData = [
-      OrdinalSales('Mon', 400000),
-      OrdinalSales('Tue', 25000),
-      OrdinalSales('Wed', 100000),
-      OrdinalSales('Thu', 750000),
-      OrdinalSales('Fri', 100000),
-      OrdinalSales('Sat', 100000),
-      OrdinalSales('Sun', 90000),
+      OrdinalSales('Mon', 400),
+      OrdinalSales('Tue', 250),
+      OrdinalSales('Wed', 100),
+      OrdinalSales('Thu', 750),
+      OrdinalSales('Fri', 100),
+      OrdinalSales('Sat', 100),
+      OrdinalSales('Sun', 900),
     ];
 
     final losAngelesSalesData = [
-      OrdinalSales('Mon', 40),
-      OrdinalSales('Tue', 40),
-      OrdinalSales('Wed', 10),
-      OrdinalSales('Thu', 20),
-      OrdinalSales('Fri', 50),
-      OrdinalSales('Sat', 10),
-      OrdinalSales('Sun', 20),
+      OrdinalSales('Mon', 12),
+      OrdinalSales('Tue', 10),
+      OrdinalSales('Wed', 08),
+      OrdinalSales('Thu', 11),
+      OrdinalSales('Fri', 12),
+      OrdinalSales('Sat', 09),
+      OrdinalSales('Sun', 13),
     ];
 
     return [
@@ -105,7 +96,6 @@ class BarChartWithSecondaryAxis extends StatelessWidget {
         domainFn: (sales, _) => sales.dayOfWeek,
         measureFn: (sales, _) => sales.sales,
         data: globalSalesData,
-        // Thiết lập màu cho cột chính
         colorFn: (_, __) => charts.MaterialPalette.blue.shadeDefault,
       ),
       charts.Series<OrdinalSales, String>(
@@ -113,7 +103,6 @@ class BarChartWithSecondaryAxis extends StatelessWidget {
         domainFn: (sales, _) => sales.dayOfWeek,
         measureFn: (sales, _) => sales.sales,
         data: losAngelesSalesData,
-        // Thiết lập màu cho cột phụ
         colorFn: (_, __) => charts.MaterialPalette.green.shadeDefault,
       )..setAttribute(charts.measureAxisIdKey, secondaryMeasureAxisId),
     ];
@@ -127,5 +116,4 @@ class OrdinalSales {
   OrdinalSales(this.dayOfWeek, this.sales);
 }
 
-  
 
